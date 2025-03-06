@@ -1,0 +1,15 @@
+body{
+    text-align: center;
+    align-items:center;
+
+    background-color: gainsboro;
+    height: 100vh;
+}
+.button{
+    text-align: center;
+    background-color: rgb(167, 167, 167);
+    font-size: larger;
+    text-decoration: wavy;
+    width: 200px;
+    height: 100px;
+}
