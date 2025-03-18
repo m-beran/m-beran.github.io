@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web INF</title>
+</head>
+<body>
+    <h1>web pro inf test</h1>
+    <br>
+
+    <img src="cislovany.png">
+    <pre>
+        &lt;ol&gt;
+          &lt;li&gt;První položka seznamu&lt;/li&gt;
+          &lt;li&gt;Druhá položka&lt;/li&gt;
+          &lt;li&gt;Třetí položka&lt;/li&gt;
+        &lt;/ol&gt;
+        </pre>
+        <br>
+    <img src="teckovany.png">
+    <pre>
+        &lt;ul&gt;
+            &lt;li&gt;První položka seznamu&lt;/li&gt;
+            &lt;li&gt;Druhá položka&lt;/li&gt;
+            &lt;li&gt;Třetí položka&lt;/li&gt;
+        &lt;/ul&gt;
+    </pre> 
+    <br>
+    <img src="vnoreny.png">
+    <pre>
+        &lt;ul&gt;
+            &lt;li&gt;První položka seznamu&lt;/li&gt;
+            &lt;li&gt;Druhá položka
+                &lt;ul&gt;
+                    &lt;li&gt;První položka podseznamu&lt;/li&gt;
+                    &lt;li&gt;Druhá položka podseznamu&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/li&gt;<!-- konec druhé položky hlavního seznamu -->
+            &lt;li&gt;Třetí položka hlavního seznamu&lt;/li&gt;
+        &lt;/ul&gt;
+    </pre>
+    <br>
+    <h4>Podseznam musí být vnořen do položky hlavního seznamu, nikoli mezi položky.<br> Tzn., že konec položky hlavního seznamu musí být až za koncem vnořeného seznamu.</h4>
+    <br>
+    <pre>
+        Správně
+        
+        &lt;ul&gt;
+            &lt;li&gt;Pyramidy v Gíze
+                &lt;ul&gt;
+                    &lt;li&gt;Chufuova&lt;/li&gt;
+                    &lt;li&gt;Rachefova&lt;/li&gt;
+                    &lt;li&gt;Menkauerova&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/li&gt;<!-- konec položky Pyramidy v Gíze -->
+            &lt;li&gt;Visuté zahrady&lt;/li&gt;
+            &lt;li&gt;Artemidin chrám&lt;/li&gt;
+            &lt;li&gt;Diova socha&lt;/li&gt;
+            &lt;li&gt;Mausoleum&lt;/li&gt;
+            &lt;li&gt;Kolos&lt;/li&gt;
+            &lt;li&gt;Maják&lt;/li&gt;
+        &lt;/ul&gt;
+        
+        Špatně
+        
+        &lt;ul&gt;
+            &lt;li&gt;Pyramidy v Gíze&lt;/li&gt;
+            &lt;ul&gt;
+                &lt;li&gt;Chufuova&lt;/li&gt;
+                &lt;li&gt;Rachefova&lt;/li&gt;
+                &lt;li&gt;Menkauerova&lt;/li&gt;
+            &lt;/ul&gt;
+            &lt;li&gt;Visuté zahrady&lt;/li&gt;
+            &lt;li&gt;Artemidin chrám&lt;/li&gt;
+            &lt;li&gt;Diova socha&lt;/li&gt;
+            &lt;li&gt;Mausoleum&lt;/li&gt;
+            &lt;li&gt;Kolos&lt;/li&gt;
+            &lt;li&gt;Maják&lt;/li&gt;
+        &lt;/ul&gt;
+        </pre>
+    <br>
+    <img src="tabulkynapoveda.png" >
+    <br>
+    <img src="tabulkabila.png" alt="tab">
+    <pre>
+        &lt;table&gt;
+            &lt;tr&gt;
+                &lt;td&gt;1. buňka prvního řádku&lt;/td&gt;
+                &lt;td&gt;2. buňka prvního řádku&lt;/td&gt;
+                &lt;td&gt;3. buňka prvního řádku&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;1. buňka druhého řádku&lt;/td&gt;
+                &lt;td&gt;2. buňka druhého řádku&lt;/td&gt;
+                &lt;td&gt;3. buňka druhého řádku&lt;/td&gt;
+            &lt;/tr&gt;
+        &lt;/table&gt;
+        </pre>
+    <br>
+    <img src="tabulkazluta.png">
+    <pre>
+        &lt;table&gt;
+            &lt;tr&gt;
+                &lt;th&gt;1. buňka záhlaví&lt;/th&gt;
+                &lt;th&gt;2. buňka záhlaví&lt;/th&gt;
+                &lt;th&gt;3. buňka záhlaví&lt;/th&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;1. buňka druhého řádku&lt;/td&gt;
+                &lt;td&gt;2. buňka druhého řádku&lt;/td&gt;
+                &lt;td&gt;3. buňka druhého řádku&lt;/td&gt;
+            &lt;/tr&gt;
+        &lt;/table&gt;
+        </pre>
+        <br>
+    <img src="colspan.png">
+    <pre>
+        &lt;table&gt;
+            &lt;tr&gt;
+                &lt;th&gt;1. buňka záhlaví&lt;/th&gt;
+                &lt;th colspan=&quot;2&quot;&gt;sloučená 2.-3. buňka záhlaví&lt;/th&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;1. buňka druhého řádku&lt;/td&gt;
+                &lt;td&gt;2. buňka druhého řádku&lt;/td&gt;
+                &lt;td&gt;3. buňka druhého řádku&lt;/td&gt;
+            &lt;/tr&gt;
+        &lt;/table&gt;
+        </pre>
+        <br>
+    <img src="rawspan.png">
+    <pre>
+        &lt;table&gt;
+            &lt;tr&gt;
+                &lt;th rowspan=&quot;2&quot;&gt;sloučená buňka 1. a 2. řádku&lt;/th&gt;
+                &lt;th&gt;2. buňka záhlaví&lt;/th&gt;
+                &lt;th&gt;3. buňka záhlaví&lt;/th&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;2. buňka druhého řádku&lt;/td&gt;
+                &lt;td&gt;3. buňka druhého řádku&lt;/td&gt;
+            &lt;/tr&gt;
+        &lt;/table&gt;
+        </pre>
+</body>
+</html>
