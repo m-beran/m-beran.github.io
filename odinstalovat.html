@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/styl.css">
+    <title>m-beran Web</title>
+</head>
+<body>
+    <h1>Když se chceš ODINSTALOVAT</h1>
+    <button type="button" class="button">ODINSTALOVAT</button>
+    <p>Počet Odinstalování se: <span id="clickCounter">?</span></p>
+
+    <!-- Firebase JS SDK -->
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.4.0/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.4.0/firebase-analytics.js";
+        import { getDatabase, ref, set, get } from "https://www.gstatic.com/firebasejs/11.4.0/firebase-database.js";
+
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+            apiKey: "sub_8Qzd9pOYFYwUBDHC5714XgCsPnZTuKT3Gl78lj",
+            authDomain: "m-beransite.firebaseapp.com",
+            projectId: "m-beransite",
+            storageBucket: "m-beransite.firebasestorage.app",
+            messagingSenderId: "454468970755",
+            appId: "1:454468970755:web:6946dceb4fd98566eea136",
+            measurementId: "G-T1Q3686WF1"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+
+        // Initialize Realtime Database
+        const database = getDatabase(app, 'https://m-beransite-default-rtdb.europe-west1.firebasedatabase.app');
+        const clicksRef = ref(database, 'clicks/');
+
+        // Zobrazení počtu kliknutí na stránce
+        const clickCounterElement = document.getElementById("clickCounter");
+
+        // Funkce pro získání počtu kliknutí z Firebase
+        function updateClickCount() {
+            get(clicksRef).then((snapshot) => {
+                if (snapshot.exists()) {
+                    // Pokud existuje hodnota, nastavíme ji do HTML
+                    clickCounterElement.innerText = snapshot.val();
+                } else {
+                    // Pokud neexistuje žádná hodnota, nastavíme 0
+                    clickCounterElement.innerText = 0;
+                }
+            }).catch((error) => {
+                console.error("Chyba při načítání dat:", error);
+            });
+        }
+
+        // Počáteční načtení počtu kliknutí z Firebase
+        updateClickCount();
+
+        // Zpracování kliknutí na tlačítko
+        const button = document.querySelector(".button");
+        button.addEventListener("click", () => {
+            // Získání aktuálního počtu kliknutí
+            get(clicksRef).then((snapshot) => {
+                let currentCount = snapshot.exists() ? snapshot.val() : 0;
+                currentCount++; // Zvyšte počet kliknutí
+
+                // Uložení aktualizovaného počtu do Firebase
+                set(clicksRef, currentCount);
+
+                // Aktualizace zobrazení počtu na stránce
+                clickCounterElement.innerText = currentCount;
+
+                // Zobrazení alertu
+                alert('ODINSTALOVÁNO');
+            });
+        });
+    </script>
+</body>
+</html>
