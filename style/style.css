@@ -68,3 +68,13 @@ hr{
   border: 1px solid #000000;
   padding: 8px 8px 8px 32px;
 }
+
+.dodatek{
+  font-style: italic;
+  color:#1d1d1d;
+}
+
+img{
+  height: auto;
+  width: auto;
+}
