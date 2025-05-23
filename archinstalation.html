@@ -48,15 +48,100 @@
                 <a>Po zvolení bychom se měli dostat na tuto obrazovku</a>    
                 <br><img src="image/2.png" alt="img"><br>
 
-                <h2>Nastavení lokalizace:</h2>
+                <h2>Nastavení klávesnice a internetu:</h2>
+                <a>Pro to aby jste mohli používat klávesnici s českým rozložením zadáme příkaz</a>
+                <pre># loadkeys cz</pre>
+                <a>"cz" pro českou klávesnici s rozložením qwerty pro rozložení qwertz zadejte</a>
+                <pre># loadkeys cz-qwertz</pre>
+                <a>nebo pro prohlédnutí dostupných rozložení zadejte</a>
+                <pre># ls /usr/share/kbd/keymaps/**/*.map.gz</pre>
                 <br><img src="image/3.png" alt="img"><br>
+
+                <a>Stiskem kláves <u>ctrl</u>+<u>L</u> smažete výpis pro lepší přehlednost</a>
+                <br>
+                <a class="dodatek">toto budu používat často pro lepší přehlednost ale vy nemusíte</a>
                 <br><img src="image/4.png" alt="img"><br>
+                
+                <a>Teď zjistíme jestli jsme připojeni k internetu</a>
+                <br><br>
+                <a class="dodatek">v tomto článku vysvětluji pouze pro pc připojené pomocí ethernetu
+                    pokud byste neměli možnost ethernet použít zkuste se podívat jak připojit pc pomocí 
+                    <a href="https://wiki.archlinux.org/title/Iwd#iwctl" target="_blank">wifi</a>
+                </a><br>
+                <br>
+                <a>pokud používáme tedy ethernet zadáme</a>
+                <pre># ping archlinux.org</pre>
+                <a>pokud jste připojeni mělo by se vám začít ukazovat podobný výpis jako na obrázku</a>
+                <br>
+                <a>nyní tento příkten jednoduše zrušit klávesou <u>ctrl</u>+<u>C</u></a>
                 <br><img src="image/5.png" alt="img"><br>
+
+                <h2>Tvorba diskových oddílů:</h2>
+                <br><br>
+                <a>spustíme příkaz</a>
+                <pre># cfdisk</pre>
                 <br><img src="image/6.png" alt="img"><br>
+                <a>a zvolíme typ GPT</a>
                 <br><img src="image/7.png" alt="img"><br>
+                <a>Nyní byste měli vidět to co je na obrázku pod kolonkou device: Free space</a>
+                <br><br>
+                <a class="zvyraznit">Pokud zde máte něco podobného jako /dev/sda1 nebo s podobným číslem
+                    musíte naformátovat disky to uděláte tak že šipkama ↑ ↓ zvolíme daný oddíl a šipkama
+                    → ← najedeme na kolonku DELETE a zmáčkneme ENTER
+                </a>
+                <br><br>
+                <a>nyní si vytvoříme oddíly na našem disku celkem vytvoříme a budeme potřebovat 3</a>
+                <br><br>
+                <table border="1">
+                    <tr>
+                    <th>Montážní bod
+                    </th>
+                    <th>Oddíl
+                    </th>
+                    <th><a href="https://en.wikipedia.org/wiki/GUID_Partition_Table#Partition_type_GUIDs" class="extiw" title="wikipedia:GUID Partition Table">Druh oddílu</a>
+                    </th>
+                    <th>Doporučená velikost
+                    </th></tr>
+                    <tr>
+                    <td><code>/mnt/boot</code>
+                    </td>
+                    <td><code>/dev/<i>efi_system_partition</i></code>
+                    </td>
+                    <td>EFI systémový oddíl
+                    </td>
+                    <td>Alespoň 100 MiB
+                    </td></tr>
+                    <tr>
+                    <td><code>[SWAP]</code>
+                    </td>
+                    <td><code>/dev/<i>swap_partition</i></code>
+                    </td>
+                    <td>Linux swap
+                    </td>
+                    <td>Víc než 512 MiB
+                    </td></tr>
+                    <tr>
+                    <td><code>/mnt</code>
+                    </td>
+                    <td><code>/dev/<i>root_partition</i></code>
+                    </td>
+                    <td>Linux x86-64 root (/)
+                    </td>
+                    <td>Zbytek zařízení
+                    </td></tr>
+                </table>
+                <br><br>
+                <a>Jako první vytvoříme systémový oddíl EFI na free space zvolíme NEW</a>
                 <br><img src="image/8.png" alt="img"><br>
+                <a>A zvolíme velikost 100M s velkým M!!!</a>
                 <br><img src="image/9.png" alt="img"><br>
+                <a class="dodatek">Jako další vytvoříme oddíl Swap ten slouží k tomu když dojde pamět ram bude se
+                    využívat právě swap oddíl
+                </a>
+                <br>
+                <a>Zvolíme NEW</a>
                 <br><img src="image/10.png" alt="img"><br>
+                <a>A velikost dáme třeba 2GB ale můžeme zvolit i více</a>
                 <br><img src="image/11.png" alt="img"><br>
                 <br><img src="image/12.png" alt="img"><br>
                 <br><img src="image/13.png" alt="img"><br>

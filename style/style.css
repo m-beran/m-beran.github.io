@@ -77,10 +77,22 @@ hr{
   font-weight: bold;
 }
 
+pre{
+  border: 1px solid #000000;
+  border-radius: 5px;
+  background-color: #F2F2F2;
+  padding: 10px 10px 10px 10px;
+}
+
 img{
   max-width: 100%;
   max-height: 100%;
   width: auto;
   height: auto;
   display: block;
+}
+tr td{
+  
+  border-collapse: collapse;
+  padding: 8px;
 }
