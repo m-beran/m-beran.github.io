@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="image/linux.ico" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="style/style.css">
+    <link rel="stylesheet" type="text/css" href="style/cmdstyle.css">
     <title>Linux Guide</title>
 </head>
 <body>
@@ -18,14 +19,130 @@
         <a href="linuxcmd.html">Linux Příkazy</a>
         <a href="linuxdistros.html">Linux Distribuce</a>
         <a href="archinstalation.html">Jak nainstalovat Arch</a>
+        <a href="odinstalovat.html">Odinstalovat se (nehodnotit)</a>
         <a href="about.html">O mně</a>
     </div>
     <span style="font-size:40px;cursor:pointer" onclick="openNav()">&#9776; MENU</span>
     <div id="main">
-    <a>ahojda</a>
+        <div class="paper">
+            <nav>
+                <h2>Content</h2>
+                <div class="indent">
+                    <ul>
+                        <li><a href="#files">Práce se soubory</a></li>
+                        <li><a href="#processes">Procesy a systém</a></li>
+                        <li><a href="#network">Síťové příkazy</a></li>
+                        <li><a href="#system">Práce se systémem</a></li>
+                        <li><a href="#archives">Manipulace s archivy</a></li>
+                        <li><a href="#users">Uživatelé a oprávnění</a></li>
+                        <li><a href="#packages">Balíčky a instalace</a></li>
+                        <li><a href="#development">Vývojářské příkazy</a></li>
+                    </ul>
+                </div>
+            </nav>
+
+            <section id="files">
+                <h2>Práce se soubory (<a href="#top" class="back-to-top">&#8593; Nahoru</a>)</h2>
+                    <div class="indent">
+                        <p><code>ls</code>: Vypíše obsah aktuálního adresáře.</p>
+                        <p><code>cd</code>: Přepne do jiného adresáře (např. <code>cd /home</code>).</p>
+                        <p><code>pwd</code>: Zobrazí cestu k aktuálnímu pracovnímu adresáři.</p>
+                        <p><code>cp</code>: Kopíruje soubory nebo adresáře.</p>
+                        <p><code>mv</code>: Přesunuje nebo přejmenovává soubory nebo adresáře.</p>
+                        <p><code>rm</code>: Smaže soubory nebo adresáře (pozor: nevratné).</p>
+                        <p><code>touch</code>: Vytvoří nový prázdný soubor.</p>
+                        <p><code>mkdir</code>: Vytvoří nový adresář.</p>
+                        <p><code>rmdir</code>: Smaže prázdný adresář.</p>
+                        <p><code>find</code>: Hledá soubory a adresáře podle různých kritérií.</p>
+                        <p><code>locate</code>: Rychle vyhledá soubory v systému (vyžaduje databázi <code>updatedb</code>).</p>
+                        <p><code>cat</code>: Zobrazí obsah souboru.</p>
+                        <p><code>less</code>: Zobrazí obsah souboru po stránkách.</p>
+                        <p><code>head</code>: Zobrazí prvních několik řádků souboru.</p>
+                        <p><code>tail</code>: Zobrazí posledních několik řádků souboru.</p>
+                    </div>
+            </section>
+
+            <section id="processes">
+                <h2>Procesy a systém (<a href="#top" class="back-to-top">&#8593; Nahoru</a>)</h2>
+                    <div class="indent">
+                        <p><code>ps</code>: Vypíše seznam aktuálně běžících procesů.</p>
+                        <p><code>top</code>: Zobrazuje běžící procesy v reálném čase.</p>
+                        <p><code>htop</code>: Rozšířená verze příkazu <code>top</code> (musí být nainstalovaný).</p>
+                        <p><code>kill</code>: Ukončí proces podle jeho PID.</p>
+                        <p><code>pkill</code>: Ukončí procesy podle názvu (např. <code>pkill firefox</code>).</p>
+                    </div>
+            </section>
+
+            <section id="network">
+                <h2>Síťové příkazy (<a href="#top" class="back-to-top">&#8593; Nahoru</a>)</h2>
+                    <div class="indent">
+                        <p><code>ping</code>: Otestuje připojení k hostiteli (např. <code>ping google.com</code>).</p>
+                        <p><code>curl</code>: Odesílá požadavky na URL (stahování dat, testování API apod.).</p>
+                        <p><code>wget</code>: Stahuje soubory z internetu.</p>
+                        <p><code>ip a</code>: Zobrazí síťové rozhraní a IP adresy.</p>
+                        <p><code>ifconfig</code>: Zastaralé, ale stále používané pro zobrazení síťových informací.</p>
+                        <p><code>netstat</code>: Zobrazí síťové připojení, porty a stav síťových soketů.</p>
+                        <p><code>traceroute</code>: Sleduje cestu k cílovému hostiteli.</p>
+                        <p><code>ssh</code>: Připojí se ke vzdálenému serveru přes Secure Shell.</p>
+                    </div>
+            </section>
+
+            <section id="system">
+                <h2>Práce se systémem (<a href="#top" class="back-to-top">&#8593; Nahoru</a>)</h2>
+                    <div class="indent">
+                        <p><code>uptime</code>: Ukáže, jak dlouho je systém zapnutý.</p>
+                        <p><code>who</code>: Zobrazí seznam přihlášených uživatelů.</p>
+                        <p><code>uname -a</code>: Zobrazí informace o systému.</p>
+                        <p><code>df</code>: Ukáže využití diskového prostoru.</p>
+                        <p><code>du</code>: Ukáže velikost souborů a adresářů.</p>
+                        <p><code>free</code>: Zobrazí využití paměti (RAM).</p>
+                        <p><code>top</code>: Sleduje spotřebu CPU a RAM procesy.</p>
+                    </div>
+            </section>
+
+            <section id="archives">
+                <h2>Manipulace s archivy (<a href="#top" class="back-to-top">&#8593; Nahoru</a>)</h2>
+                    <div class="indent">
+                        <p><code>tar</code>: Archivuje soubory do formátu <code>.tar</code> nebo rozbaluje archivy.</p>
+                        <p><code>gzip</code>: Komprimuje soubory do <code>.gz</code>.</p>
+                        <p><code>gunzip</code>: Dekompresuje <code>.gz</code> soubory.</p>
+                        <p><code>zip</code>: Komprimuje soubory do <code>.zip</code>.</p>
+                        <p><code>unzip</code>: Rozbalí <code>.zip</code> archivy.</p>
+                    </div>
+            </section>
+
+            <section id="users">
+                <h2>Uživatelé a oprávnění (<a href="#top" class="back-to-top">&#8593; Nahoru</a>)</h2>
+                    <div class="indent">
+                        <p><code>whoami</code>: Zobrazí aktuálního uživatele.</p>
+                        <p><code>sudo</code>: Spustí příkaz s oprávněním správce.</p>
+                        <p><code>chmod</code>: Změní oprávnění k souborům nebo adresářům.</p>
+                        <p><code>chown</code>: Změní vlastníka souborů nebo.</p>
+                        <p><code>passwd</code>: Změní heslo aktuálního uživatele.</p>
+                    </div>
+            </section>
+
+            <section id="packages">
+                <h2>Balíčky a instalace (<a href="#top" class="back-to-top">&#8593; Nahoru</a>)</h2>
+                    <div class="indent">
+                        <p><code>apt</code>: Nástroj pro správu balíčků v distribucích Debian/Ubuntu (např. <code>sudo apt install balíček</code>).</p>
+                        <p><code>yum</code>: Správa balíčků v distribucích RedHat/CentOS.</p>
+                        <p><code>dnf</code>: Moderní náhrada za <code>yum</code>.</p>
+                        <p><code>pacman</code>: Nástroj pro správu balíčků v Arch Linuxu.</p>
+                    </div>
+            </section>
+
+            <section id="development">
+                <h2>Vývojářské příkazy (<a href="#top" class="back-to-top">&#8593; Nahoru</a>)</h2>
+                    <div class="indent">
+                        <p><code>gcc</code>: Kompiluje C programy.</p>
+                        <p><code>make</code>: Spouští skripty pro automatizaci kompilace.</p>
+                        <p><code>git</code>: Verzovací systém pro práci s kódem (např. <code>git clone</code>).</p>
+                    </div>
+            </section>
 
 
-    
+        </div>
     </div>
 </body>
 </html>

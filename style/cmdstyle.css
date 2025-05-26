@@ -1,0 +1,35 @@
+
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin: 5px 0;
+        }
+
+        a {
+            text-decoration: none;
+            color: #2980b9;
+            
+        }
+
+        a:hover {
+            text-decoration: underline;
+            color: #003253;
+        }
+
+        code {
+            color: #c0392b;
+            font-weight: bold;
+            font-size: 1.4em;
+        }
+
+        .back-to-top {
+            font-size: 0.9em;
+        }
+
+        .indent {
+            padding-left: 20px;
+        }
