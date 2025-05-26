@@ -82,6 +82,8 @@ pre{
   border-radius: 5px;
   background-color: #F2F2F2;
   padding: 10px 10px 10px 10px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 img{
@@ -91,8 +93,34 @@ img{
   height: auto;
   display: block;
 }
+
+.tabulka{
+  max-width: 800px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.tabulka table{
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tabulka th, .tabulka td{
+  white-space: nowrap;
+}
+
 tr td{
   
   border-collapse: collapse;
   padding: 8px;
+}
+
+.modra{
+  color: rgb(0, 0, 168);
+}
+
+.iusearchbtw{
+  font-size: 40px;
+  font-weight: bold;
+  font-style: italic;
 }
