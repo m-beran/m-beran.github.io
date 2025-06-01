@@ -41,13 +41,13 @@
 
                 <h2>Spuštění instalace:</h2>
                 <a>Vložte usb s obrazem do pc a nabootujte potom by se vám mělo zobrazit něco takového:</a>
-                <br><img src="image/1.png" alt="img"><br>
+                <br><img src="image/1.png" alt="img"><hr><br>
                 <a>Pomocí šipek ↑ ↓ na klávesnici se můžete pohybovat v nabídce</a>
                 <br>
                 <a class="zvyraznit">Zvolíme první možnost "Arch Linux install medium (x86_64, BIOS)" pomocí tlačítka ENTER</a>
                 <br><br>
                 <a>Po zvolení bychom se měli dostat na tuto obrazovku</a>    
-                <br><img src="image/2.png" alt="img"><br>
+                <br><img src="image/2.png" alt="img"><hr><br>
 
                 <h2>Nastavení klávesnice a internetu:</h2>
                 <a>Pro to aby jste mohli používat klávesnici s českým rozložením zadáme příkaz</a>
@@ -56,12 +56,12 @@
                 <pre># loadkeys cz-qwertz</pre>
                 <a>nebo pro prohlédnutí dostupných rozložení zadejte</a>
                 <pre># ls /usr/share/kbd/keymaps/**/*.map.gz</pre>
-                <br><img src="image/3.png" alt="img"><br>
+                <br><img src="image/3.png" alt="img"><hr><br>
 
                 <a>Stiskem kláves <u>ctrl</u>+<u>L</u> smažete výpis pro lepší přehlednost</a>
                 <br>
                 <a class="dodatek">toto budu používat často pro lepší přehlednost ale vy nemusíte</a>
-                <br><img src="image/4.png" alt="img"><br>
+                <br><img src="image/4.png" alt="img"><hr><br>
                 
                 <a>Teď zjistíme jestli jsme připojeni k internetu</a>
                 <br><br>
@@ -75,15 +75,15 @@
                 <a>pokud jste připojeni mělo by se vám začít ukazovat podobný výpis jako na obrázku</a>
                 <br>
                 <a>nyní tento příkten jednoduše zrušit klávesou <u>ctrl</u>+<u>C</u></a>
-                <br><img src="image/5.png" alt="img"><br>
+                <br><img src="image/5.png" alt="img"><hr><br>
 
                 <h2>Tvorba diskových oddílů:</h2>
                 <br><br>
                 <a>spustíme příkaz</a>
                 <pre># cfdisk</pre>
-                <br><img src="image/6.png" alt="img"><br>
+                <br><img src="image/6.png" alt="img"><hr><br>
                 <a>a zvolíme typ GPT</a>
-                <br><img src="image/7.png" alt="img"><br>
+                <br><img src="image/7.png" alt="img"><hr><br>
                 <a>Nyní byste měli vidět to co je na obrázku pod kolonkou device: Free space</a>
                 <br><br>
                 <a class="zvyraznit">Pokud zde máte něco podobného jako /dev/sda1 nebo s podobným číslem
@@ -135,50 +135,50 @@
                 </div>
                 <br><br>
                 <a>Jako první vytvoříme systémový oddíl EFI na free space zvolíme NEW</a>
-                <br><img src="image/8.png" alt="img"><br>
+                <br><img src="image/8.png" alt="img"><hr><br>
                 <a>A zvolíme velikost 100M s velkým M!!!</a>
-                <br><img src="image/9.png" alt="img"><br>
+                <br><img src="image/9.png" alt="img"><hr><br>
                 <a class="dodatek">Jako další vytvoříme oddíl Swap ten slouží k tomu když dojde pamět ram bude se
                     využívat právě swap oddíl
                 </a>
                 <br>
                 <a>Zvolíme NEW</a>
-                <br><img src="image/10.png" alt="img"><br>
+                <br><img src="image/10.png" alt="img"><hr><br>
                 <a>A velikost dáme třeba 2GB ale můžeme zvolit i více</a>
-                <br><img src="image/11.png" alt="img"><br>
+                <br><img src="image/11.png" alt="img"><hr><br>
                 <a>Jako poslední oddíl musíme vytvořit /mnt (to je oddíl kde budeme ukládat všechny vaše soubory)</a>
                 <br><a>Proto dáme jen NEW a ENTER</a>
-                <br><img src="image/12.png" alt="img"><br>
+                <br><img src="image/12.png" alt="img"><hr><br>
 
                 <a>Ted bychom měli mít vytvořené 3 oddíly Boot 100M, Swap 2GB nebo vámi zvolená hodnota, mnt zbytek disku</a>
                 <br>
                 <a>Všechny tyto disky by měli mít na začátku /dev/sdXX ověřte že místo XX sou stejná písmena jako např.: a1 a2 a3</a>
-                <br><img src="image/13.png" alt="img"><br>
+                <br><img src="image/13.png" alt="img"><hr><br>
                 <a>Nyní abychom vše potvrdil musíme šipkama → ← zvolit Write a ENTER a napsat "yes" a pak už jen ENTER</a>
-                <br><img src="image/14.png" alt="img"><br>
+                <br><img src="image/14.png" alt="img"><hr><br>
                 <a>Dole by se vám mělo zobrazit modrým písmem <a class="modra">The patrition table has been altered</a></a>
-                <br><img src="image/15.png" alt="img"><br>
+                <br><img src="image/15.png" alt="img"><hr><br>
                 <a>Pak už jenom Quit a smažeme výpis</a>
-                <br><img src="image/16.png" alt="img"><br>
+                <br><img src="image/16.png" alt="img"><hr><br>
 
                 <h2>Formátování oddílů</h2>
                 <br>
                 <a>napíšeme příkaz lsblk pro výpis všech disků připojené k pc</a>
                 <pre># lsblk</pre>
-                <br><img src="image/17.png" alt="img"><br>
+                <br><img src="image/17.png" alt="img"><hr><br>
                 <a>Nás konkrétně při výpisu zajímají disky sda1, sda2, sda3</a>
                 <br>
                 <a>Jako první tedy vložíme příkaz</a>
                 <pre># mkfs.ext4 /dev/sda3</pre>
                 <a class="zvyraznit">POZOR!! chceme takhle naformátovat největší z disků tedy ten který jsme v cfdisk tvořily naposled</a>
                 <br><a>Čímž naformátujeme náš disk pro naše osobní soubory konkrétně na formát ext4 se kterým právě Linux/GNU pracuje</a>
-                <br><img src="image/18.png" alt="img"><br>
+                <br><img src="image/18.png" alt="img"><hr><br>
                 <a>Dále naformátujeme náš boot disk to je ten který má tech 100M na formát fat32</a>
                 <pre># mkfs.fat -F 32 /dev/sda1</pre>
-                <br><img src="image/19.png" alt="img"><br>
+                <br><img src="image/19.png" alt="img"><hr><br>
                 <a>A jako poslední ukážeme systému kde je náš Swap</a>
                 <pre># mkswap /dev/sda2</pre>
-                <br><img src="image/20.png" alt="img"><br>
+                <br><img src="image/20.png" alt="img"><hr><br>
 
                 <h2>Připojování disků</h2>
                 <br>
@@ -186,22 +186,22 @@
                 <br>
                 <a>Začneme sda3 což je náš disk na osobní soubory, připojíme ho do mnt</a>
                 <pre># mount /dev/sda3 /mnt</pre>
-                <br><img src="image/21.png" alt="img"><br>
+                <br><img src="image/21.png" alt="img"><hr><br>
                 <a>po zadání znova lsblk si můžeme všimnout že disk sda3 s velikostí 5.9G se připojil na mnt</a>
-                <br><img src="image/22.png" alt="img"><br>
+                <br><img src="image/22.png" alt="img"><hr><br>
                 <a>Jako další připojíme boot oddíl (ten s velikostí 100M) ale nejdřív musíme vytvořit boot složku</a>
                 <pre># mkdir -p /mnt/boot/efi</pre>
                 <a>A připojíme ho</a>
                 <pre># mount /dev/sda1 /mnt/boot/efi</pre>
-                <br><img src="image/23.png" alt="img"><br>
+                <br><img src="image/23.png" alt="img"><hr><br>
 
                 <a>Dále připojíme náš Swap</a>
                 <pre># swapon /dev/sda2</pre>
-                <br><img src="image/24.png" alt="img"><br>
+                <br><img src="image/24.png" alt="img"><hr><br>
                 <a>Nyní příkazem</a>
                 <pre># lsblk</pre>
                 <a>Zkontrolujeme že náš 100M oddíl je v /mnt/boot/efi, 2GB je označen jako [SWAP], a zbytek disku je v /mnt</a>
-                <br><img src="image/25.png" alt="img"><br>
+                <br><img src="image/25.png" alt="img"><hr><br>
 
                 <h2>Instalace Archlinux</h2>
                 <br>
@@ -219,67 +219,67 @@
                     <li><strong>networkmanager</strong> – síť správce</li>
                 </ul>
                 <a class="dodatek">Instalace může zabrat i 20 minut</a>
-                <br><img src="image/26.png" alt="img"><br>
+                <br><img src="image/26.png" alt="img"><hr><br>
                 <h2>Konfigurace systému</h2>
                 <br>
                 <a>Když máme nainstalováno smažeme si výpis a vygenerujeme a uložíme si výpis připojených disků</a>
                 <pre># genfstab /mnt > /mnt/etc/fstab</pre>
-                <br><img src="image/27.png" alt="img"><br>
+                <br><img src="image/27.png" alt="img"><hr><br>
                 <a>Abychom mohli konfigurovat zbytek systému musíme se stát root uživatelem to udělaáme zadáním</a>
                 <pre># arch-chroot /mnt</pre>
-                <br><img src="image/28.png" alt="img"><br>
+                <br><img src="image/28.png" alt="img"><hr><br>
                 <a>Nejdřív nastavíme lokalizaci podle toho kde bydlíme (v našem případě to je Evropa Praha)</a>
                 <pre># ln -sf /usr/share/zoneinfo/Europe/Prague /etc/localtime</pre>
                 <a>A zkontrolujeme zda čas a datum sedí výpisem z date</a>
                 <pre># date</pre>
-                <br><img src="image/29.png" alt="img"><br>
+                <br><img src="image/29.png" alt="img"><hr><br>
                 <a>Nastavíme hardware hodiny podle softwarových</a>
                 <pre># hwclock --systohc</pre>
-                <br><img src="image/30.png" alt="img"><br>
+                <br><img src="image/30.png" alt="img"><hr><br>
                 <a>Ted určíme systému co má používat za jazyk a jaké kodování</a>
                 <br>
                 <a>Otevřeme si proto soubor s lokalizací</a>
                 <pre># nano /etc/locale.gen</pre>
-                <br><img src="image/31.png" alt="img"><br>
+                <br><img src="image/31.png" alt="img"><hr><br>
                 <a>Kde po výpisu uvidíme spoustu jazykových variant já ale volím cs_CZ.UTF-8 UTF-8 (zvolíme ho tím že odstraníme znak '#')</a>
                 <br>
                 <a>Pak už jenom soubor uložíme stiskem <u>ctrl</u>+<u>O</u> ENTER a následně ho ukončíme <u>ctrl</u>+<u>X</u></a>
-                <br><img src="image/32.png" alt="img"><br>
+                <br><img src="image/32.png" alt="img"><hr><br>
                 <a>měli bychom vidět výpis Generating locales a Generation complete</a>
-                <br><img src="image/33.png" alt="img"><br>
+                <br><img src="image/33.png" alt="img"><hr><br>
                 <a>Dále to musíme ještě zapsat do config souboru, otevřeme</a>
                 <pre># nano /etc/locale.conf</pre>
-                <br><img src="image/34.png" alt="img"><br>
+                <br><img src="image/34.png" alt="img"><hr><br>
                 <a>A vložíme "LANG=cs_CZ.UTF-8"</a>
                 <br>
                 <a>uložíme stiskem <u>ctrl</u>+<u>O</u> ENTER a následně ho ukončíme <u>ctrl</u>+<u>X</u></a>
-                <br><img src="image/35.png" alt="img"><br>
+                <br><img src="image/35.png" alt="img"><hr><br>
                 <a>Teď zvolíme název našeho pc proto otevřeme soubor</a>
                 <pre># nano /etc/hostname</pre>
                 <a>A napíšeme do editoru jak chceme aby se náš pc jmenoval pak uložíme stiskem <u>ctrl</u>+<u>O</u> ENTER a následně ho ukončíme <u>ctrl</u>+<u>X</u></a>
 
-                <br><img src="image/36.png" alt="img"><br>
+                <br><img src="image/36.png" alt="img"><hr><br>
                 <a>Ješte si nastavíme heslo ale pozor ted to bude pro root uživatele proto doporučuji silné heslo</a>
                 <pre># passwd</pre>
-                <br><img src="image/37.png" alt="img"><br>
+                <br><img src="image/37.png" alt="img"><hr><br>
                 <a>Následně si přidáme nového uživatele tak jak to zadáte se budete přihlašovat(v našem případe to bude "uzivatel")</a>
                 <pre># useradd -m -G wheel -s /bin/bash uzivatel</pre>
                 <a>a pridáme uživateli "uzivatel" heslo</a>
                 <pre># passwd uzivatel</pre>
                 <a>Aby se ale uzivatel přidal do systému musí me přidat skupinu wheel kde je uzivatel definován</a>
                 <pre># EDITOR=nano visudo</pre>
-                <br><img src="image/38.png" alt="img"><br>
+                <br><img src="image/38.png" alt="img"><hr><br>
                 <a>Zde musíme najít řádek "%wheel ALL=(ALL:ALL) ALL" a smazat '#'
                     uložíme stiskem <u>ctrl</u>+<u>O</u> ENTER a následně ho ukončíme <u>ctrl</u>+<u>X</u>
                 </a>
-                <br><img src="image/39.png" alt="img"><br>
+                <br><img src="image/39.png" alt="img"><hr><br>
                 <a>Ukončíme root uživatele příkazem exit</a>
                 <pre># exit</pre>
                 <a>vyjmeme všechny disky</a>
                 <pre>umount -a</pre>
                 <a>a restartujeme pc do nového systému příkazem reboot</a>
                 <pre># reboot</pre>
-                <br><img src="image/40.png" alt="img"><br>
+                <br><img src="image/40.png" alt="img"><hr><br>
                 <a>Vytáhnem USB flash disk a máme hotovo!</a>
                 <br><br>
                 <a>A můžeme používat oblíbenou větu:</a>
