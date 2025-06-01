@@ -147,3 +147,30 @@ tr td{
     color: #7c7c7c;
     margin: 20px 0;
 }
+
+.enviroment { 
+  border: 1px solid #ccc;
+  border-radius: 10px; 
+  margin: 20px 0; padding: 
+  20px; background: #fafafa; 
+}
+.enviroment img { 
+  max-width: 100%; 
+  border-radius: 10px; 
+}
+
+.info { 
+  margin-top: 10px; 
+}
+
+.plus, .minus { 
+  margin: 5px 0; 
+}
+
+.plus { 
+  color: green; 
+}
+
+.minus {
+   color: red; 
+  }
